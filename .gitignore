@@ -1,0 +1,4 @@
+# Static site output
+_site
+.sass-cache
+.jekyll-metadata
