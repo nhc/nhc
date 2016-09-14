@@ -1,0 +1,26 @@
+@import "bourbon";
+@import "neat";
+@import "base/base";
+
+// Change the grid settings
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 10;
+$max-width: 960px;
+
+
+$small-breakpoint-value: 400px;
+$medium-breakpoint-value: 769px;
+$medium-viewport: new-breakpoint(min-width $small-breakpoint-value max-width $medium-breakpoint-value);
+$large-viewport: new-breakpoint(min-width $medium-breakpoint-value + 1);
+
+// Variables and colors
+$serif: "adobe-caslon-pro","Times New Roman", serif;
+$sans-serif: "proxima-nova", Arial, Helvetica, serif;
+$intro-font: "";
+
+$green: #c5d31c;
+$dark-grey: #3e4152;
+$mid-grey: #9c9b9b;
+$light-grey: #e2e3e5;
+$white: #fff;
