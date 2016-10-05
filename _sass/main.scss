@@ -13,12 +13,16 @@ $medium-breakpoint-value: 769px;
 $medium-viewport: new-breakpoint(min-width $small-breakpoint-value max-width $medium-breakpoint-value);
 $large-viewport: new-breakpoint(min-width $medium-breakpoint-value + 1);
 
-// Variables and colors
-$serif: "adobe-caslon-pro","Times New Roman", serif;
-$sans-serif: "proxima-nova", Arial, Helvetica, serif;
-$intro-font: "";
+$font-headline-family: "rooney-web", sans-serif;
+$font-headline-style: normal;
+$font-headline-weight-normal: 400;
+$font-headline-weight-bold: 700;
 
-$green: #c5d31c;
+$font-body-family: "skolar-latin",sans-serif;
+$font-body-style: normal;
+$font-body-weight-normal: 400;
+$font-body-weight-bold: 700;
+
 $dark-grey: #3e4152;
 $mid-grey: #9c9b9b;
 $light-grey: #e2e3e5;
@@ -30,32 +34,70 @@ $blue-lighter: rgba(66, 122, 161, 1);
 $whiter: rgba(235, 242, 250, 1);
 $green-darker: rgba(38, 54, 20, 1);
 $green-lighter: rgba(165, 190, 0, 1);
-$temp-green: rgba(12, 87, 80, 1);
+
+img{
+  max-width: 100%;
+}
+a,p{
+  font-family: $font-body-family;
+}
 
 body.default{
- 
-  background-color: $green-darker;
+  
+  background-color: $white;
 
   .container{
     @include outer-container;
 
     &.navigation{
       @include span-columns(4);
-      background: $light-grey;
+      background-color: $green-darker;
+      height: 100vh;
+
+      .wrap{
+        @include span-columns(3 of 4);
+        @include shift(0.5);
+        
+        article.logo,
+        article.links{
+          text-align: center;
+          @include clearfix;
+        }
+        
+        article.logo{
+          font-family: "brandon-grotesque",sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 2vw;
+          img{
+            width: 80%;
+            height: 80%;
+          }
+        }
+        article.links{
+          color: $white;
+          margin: 50px auto;
+          a{
+            display: block;
+            font-size: 3.5vw;
+            line-height: 6vh;
+            text-decoration: none;
+          }
+          
+        }
+
+      }
+      
+      h1, h2, h3, h4, h5, a{
+        color: $white;
+        &:visited{
+          color: $white;
+        }
+      }
     }
 
     &.content{
-      position: relative;
-      background-color: $green-darker;
-      @include centerer;
-
-      h1{
-        font-family: "museo-sans",sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 50px;
-        color: $white;
-      }
+      @include span-columns(8);
     }
   }
 
