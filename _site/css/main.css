@@ -1,1 +1,1 @@
-html{box-sizing:border-box}*,*::after,*::before{box-sizing:inherit}
+html{box-sizing:border-box}*,*::after,*::before{box-sizing:inherit}ul{list-style-type:none}ul li{display:inline-block}.container{max-width:1470px;margin-left:auto;margin-right:auto}.container::after{clear:both;content:"";display:block}.container.navigation{float:left;display:block;margin-right:2.35765%;width:31.76157%;background:#e2e3e5}.container.navigation:last-child{margin-right:0}

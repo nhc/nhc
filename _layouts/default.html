@@ -5,9 +5,17 @@
 
   <body>
 
-    <div class="container">
-      {{ content }}  
-    </div>
+    <section class="container navigation">
+      <ul>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="personal.html">Personal</a></li>
+        <li><a href="people.html">People</a></li>
+      </ul>
+    </section>
+
+    <section class="container content">
+       {{ content }}
+    </section>
 
     {% include footer.html %}
 

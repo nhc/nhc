@@ -1,12 +1,12 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "reset";
 
 // Change the grid settings
-$column: 90px;
+$column: 95px;
 $gutter: 30px;
-$grid-columns: 10;
-$max-width: 960px;
-
+$grid-columns: 12;
+$max-width: 1470px;
 
 $small-breakpoint-value: 400px;
 $medium-breakpoint-value: 769px;
@@ -23,3 +23,19 @@ $dark-grey: #3e4152;
 $mid-grey: #9c9b9b;
 $light-grey: #e2e3e5;
 $white: #fff;
+
+/* RGB */
+$blue-dark: rgba(5, 102, 141, 1);
+$blue-lighter: rgba(66, 122, 161, 1);
+$whiter: rgba(235, 242, 250, 1);
+$green-darker: rgba(103, 148, 54, 1);
+$green-lighter: rgba(165, 190, 0, 1);
+
+
+.container{
+  @include outer-container;
+  &.navigation{
+    @include span-columns(4);
+    background: $light-grey;
+  }
+}
