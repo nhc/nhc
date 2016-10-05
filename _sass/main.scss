@@ -28,14 +28,37 @@ $white: #fff;
 $blue-dark: rgba(5, 102, 141, 1);
 $blue-lighter: rgba(66, 122, 161, 1);
 $whiter: rgba(235, 242, 250, 1);
-$green-darker: rgba(103, 148, 54, 1);
+$green-darker: rgba(38, 54, 20, 1);
 $green-lighter: rgba(165, 190, 0, 1);
+$temp-green: rgba(12, 87, 80, 1);
 
+body.default{
+ 
+  background-color: $green-darker;
 
-.container{
-  @include outer-container;
-  &.navigation{
-    @include span-columns(4);
-    background: $light-grey;
+  .container{
+    @include outer-container;
+
+    &.navigation{
+      @include span-columns(4);
+      background: $light-grey;
+    }
+
+    &.content{
+      position: relative;
+      background-color: $green-darker;
+      @include centerer;
+
+      h1{
+        font-family: "museo-sans",sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 50px;
+        color: $white;
+      }
+    }
   }
+
+
 }
+
