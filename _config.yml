@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 
 # Site settings
-title: Neil Charlton. 
+title: Neil Charlton | 
 email: neil@bleepsystems.com
 description: Making Stuff.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -12,6 +12,7 @@ url: "" # the base hostname & protocol for your site
 markdown: kramdown
 
 sass:
-  style: compressed
+  style: nested
+  #style: compressed
 
 gems: [bourbon,neat]

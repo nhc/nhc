@@ -1,6 +1,7 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "reset";
+@import "animations/animate";
 
 // Change the grid settings
 $column: 95px;
@@ -23,6 +24,7 @@ $font-body-style: normal;
 $font-body-weight-normal: 400;
 $font-body-weight-bold: 700;
 
+$text-color: #333333;
 $dark-grey: #3e4152;
 $mid-grey: #9c9b9b;
 $light-grey: #e2e3e5;
@@ -35,24 +37,48 @@ $whiter: rgba(235, 242, 250, 1);
 $green-darker: rgba(38, 54, 20, 1);
 $green-lighter: rgba(165, 190, 0, 1);
 
+html {
+   height: 100%;
+}
+
+body {
+   min-height: 100%;
+}
+
 img{
   max-width: 100%;
 }
 a,p{
   font-family: $font-body-family;
 }
+a{
+  color: $blue-dark;
+}
+
 
 body.default{
   
   background-color: $white;
+  color: $text-color;
 
   .container{
     @include outer-container;
 
-    &.navigation{
+    .navigation{
       @include span-columns(4);
       background-color: $green-darker;
       height: 100vh;
+
+      h1, h2, h3, h4, h5, a{
+        text-decoration: none;
+        color: $white;
+        &:visited{
+          color: $white;
+        }
+      }
+      h2{
+        letter-spacing: 3px;
+      }
 
       .wrap{
         @include span-columns(3 of 4);
@@ -65,39 +91,63 @@ body.default{
         }
         
         article.logo{
+          padding-top: 38px;
           font-family: "brandon-grotesque",sans-serif;
           font-style: normal;
           font-weight: 500;
-          font-size: 2vw;
+          font-size: 1.3em;
           img{
-            width: 80%;
-            height: 80%;
+            margin-top: 30px;
+            opacity: 0;
+            width: 75%;
+            height: 75%;
+            @include animation--fadedown(0.1);
           }
         }
         article.links{
           color: $white;
           margin: 50px auto;
           a{
+            font-family: "brandon-grotesque",sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            text-transform: uppercase;
+            opacity: 0;
             display: block;
-            font-size: 3.5vw;
-            line-height: 6vh;
+            font-size: 1.8em;
+            line-height: 1.3em;
             text-decoration: none;
+
+            @for $i from 1 through 3 {
+              &:nth-child(#{$i}) {
+                @include animation--fadeleft($i/5)
+              }
+            }
           }
           
         }
 
       }
       
-      h1, h2, h3, h4, h5, a{
-        color: $white;
-        &:visited{
-          color: $white;
-        }
-      }
     }
 
-    &.content{
-      @include span-columns(8);
+    .content{
+      @include span-columns(7);
+      @include shift(0.5);
+
+      padding-top: 40px;
+
+      p{
+        line-height: 1.4em;
+        margin: 1.2em 0;
+      }
+
+      h1, h2, h3, h4, h5{
+        color: $green-darker;
+        &:visited{
+          color: $green-lighter;
+        }
+      }
     }
   }
 

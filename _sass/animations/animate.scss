@@ -1,0 +1,35 @@
+@include keyframes(fadeIn) {
+  from {
+    @include transform(translateY(-30px));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeLeft) {
+  from {
+    @include transform(translateX(-30px));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateX(0));
+    opacity: 1;
+  }
+}
+
+@mixin animation--fadedown($delay) {
+  @include animation(fadeIn 0.5s ease-in-out);
+  @include animation-iteration-count(1);
+  @include animation-fill-mode(forwards);
+  @include animation-delay(#{$delay}s);
+}
+
+@mixin animation--fadeleft($delay) {
+  @include animation(fadeLeft 0.5s ease-in-out);
+  @include animation-iteration-count(1);
+  @include animation-fill-mode(forwards);
+  @include animation-delay(#{$delay}s);
+}
