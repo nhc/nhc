@@ -65,7 +65,7 @@ body.default{
     @include outer-container;
 
     .navigation{
-      @include span-columns(4);
+      @include span-columns(3);
       background-color: $green-darker;
       height: 100vh;
 
@@ -81,7 +81,7 @@ body.default{
       }
 
       .wrap{
-        @include span-columns(3 of 4);
+        @include span-columns(2 of 3);
         @include shift(0.5);
         
         article.logo,
