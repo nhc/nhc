@@ -476,7 +476,8 @@ html {
   height: 100%; }
 
 body {
-  min-height: 100%; }
+  min-height: 100%;
+  height: 100%; }
 
 img {
   max-width: 100%; }
@@ -487,11 +488,16 @@ a, p {
 a {
   color: #05668d; }
 
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block; }
+
 body.default {
   background-color: #fff;
   color: #333333; }
   body.default .container {
-    max-width: 1470px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
     body.default .container::after {
@@ -504,7 +510,7 @@ body.default {
       margin-right: 2.35765%;
       width: 23.23176%;
       background-color: #263614;
-      height: 100vh; }
+      height: 100%; }
       body.default .container .navigation:last-child {
         margin-right: 0; }
       body.default .container .navigation h1, body.default .container .navigation h2, body.default .container .navigation h3, body.default .container .navigation h4, body.default .container .navigation h5, body.default .container .navigation a {
@@ -518,10 +524,18 @@ body.default {
         float: left;
         display: block;
         margin-right: 10.1484%;
-        width: 63.28387%;
-        margin-left: 18.35807%; }
+        width: 100%;
+        height: 100%; }
         body.default .container .navigation .wrap:last-child {
           margin-right: 0; }
+        @media screen and (max-width: 480px) {
+          body.default .container .navigation .wrap {
+            float: left;
+            display: block;
+            margin-right: 10.1484%;
+            width: 100%; }
+            body.default .container .navigation .wrap:last-child {
+              margin-right: 0; } }
         body.default .container .navigation .wrap article.logo,
         body.default .container .navigation .wrap article.links {
           text-align: center; }
@@ -535,7 +549,7 @@ body.default {
           font-family: "brandon-grotesque",sans-serif;
           font-style: normal;
           font-weight: 500;
-          font-size: 1.3em; }
+          font-size: 100%; }
           body.default .container .navigation .wrap article.logo img {
             margin-top: 30px;
             opacity: 0;
@@ -563,8 +577,8 @@ body.default {
             text-transform: uppercase;
             opacity: 0;
             display: block;
-            font-size: 1.8em;
-            line-height: 1.3em;
+            font-size: 1.4em;
+            line-height: 1.7em;
             text-decoration: none; }
             body.default .container .navigation .wrap article.links a:nth-child(1) {
               -webkit-animation: fadeLeft 0.5s ease-in-out;
@@ -605,6 +619,15 @@ body.default {
               -webkit-animation-delay: 0.6s;
               -moz-animation-delay: 0.6s;
               animation-delay: 0.6s; }
+            body.default .container .navigation .wrap article.links a.network:before {
+              content: url(/images/icons/svg/network.svg);
+              margin-right: 10px; }
+            body.default .container .navigation .wrap article.links a.news-paper:before {
+              content: url(/images/icons/svg/news-paper.svg);
+              margin-right: 10px; }
+            body.default .container .navigation .wrap article.links a.mobile:before {
+              content: url(/images/icons/svg/mobile.svg);
+              margin-right: 10px; }
     body.default .container .content {
       float: left;
       display: block;
@@ -617,6 +640,12 @@ body.default {
       body.default .container .content p {
         line-height: 1.4em;
         margin: 1.2em 0; }
+      body.default .container .content aside.image {
+        display: block;
+        float: right;
+        color: #9c9b9b;
+        position: relative;
+        top: -10px; }
       body.default .container .content h1, body.default .container .content h2, body.default .container .content h3, body.default .container .content h4, body.default .container .content h5 {
         color: #263614; }
         body.default .container .content h1:visited, body.default .container .content h2:visited, body.default .container .content h3:visited, body.default .container .content h4:visited, body.default .container .content h5:visited {
