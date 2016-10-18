@@ -16,3 +16,11 @@ sass:
   #style: compressed
 
 gems: [bourbon,neat]
+
+#permalink: pretty
+permalink: /:year/:title.html
+
+collections:
+  my_categories:
+    output: true
+    permalink: /blog/category/:name/
