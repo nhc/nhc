@@ -1,6 +1,19 @@
 ---
 layout: simple
-title: About Neil
+title: Home
 ---
 
-{% include _about.html %}
+<section class="posts-list">
+  
+ 
+    {% for post in site.posts %}
+      
+        <a href="{{ post.url }}" class="title">{{ post.title }}</a>
+        {{ post.excerpt }}
+        <br />
+        <a href="{{ post.url }}">Read More ...</a>
+     
+    {% endfor %}
+  
+
+</section>

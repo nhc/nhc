@@ -14,6 +14,15 @@
 $tablet: new-breakpoint(max-width 768px);
 $mobile: new-breakpoint(max-width 480px);
 
+
+$small-breakpoint-value: 413px;
+$medium-breakpoint-value: 769px;
+
+$very-small-viewport-portrait: new-breakpoint(max-width $small-breakpoint-value - 1 orientation portrait);
+$very-small-viewport-landscape: new-breakpoint(max-width 599px orientation landscape);
+$very-small-viewport: new-breakpoint(max-width $small-breakpoint-value - 1);
+
+
 $font-headline-family: "rooney-web", sans-serif;
 $font-headline-style: normal;
 $font-headline-weight-normal: 400;
@@ -44,6 +53,7 @@ html {
 body {
    min-height: 100%;
    height: 100%;
+   font-family: $font-body-family;
 }
 
 img{
@@ -60,125 +70,106 @@ a{
   @include clearfix;
 }
 
-body.default{
-  
-  background-color: $white;
-  color: $text-color;
-
-  .container{
-    @include outer-container;
-
-    .navigation{
-      @include span-columns(3);
-      background-color: $green-darker;
-      height: 100%;
-
-      h1, h2, h3, h4, h5, a{
-        text-decoration: none;
-        color: $white;
-        &:visited{
-          color: $white;
-        }
-      }
-      h2{
-        letter-spacing: 3px;
-      }
-
-      .wrap{
-        @include span-columns(3 of 3);
-        @include media($mobile) {
-          @include span-columns(3 of 3);
-        }
-        //@include shift(0.5);
-        height: 100%;
-        
-        article.logo,
-        article.links{
-          text-align: center;
-          @include clearfix;
-        }
-        
-        article.logo{
-          padding-top: 38px;
-          font-family: "brandon-grotesque",sans-serif;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 100%;
-          img{
-            margin-top: 30px;
-            opacity: 0;
-            width: 75%;
-            height: 75%;
-            @include animation--fadedown(0.1);
-          }
-        }
-        article.links{
-          color: $white;
-          margin: 50px auto;
-          a{
-            font-family: "brandon-grotesque",sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            text-transform: uppercase;
-            opacity: 0;
-            display: block;
-            font-size: 1.4em;
-            line-height: 1.7em;
-            text-decoration: none;
-
-            @for $i from 1 through 3 {
-              &:nth-child(#{$i}) {
-                @include animation--fadeleft($i/5)
-              }
-            }
-
-            &.network:before{
-              content: url(/images/icons/svg/network.svg);
-              margin-right: 10px; 
-            }
-            &.news-paper:before{
-              content: url(/images/icons/svg/news-paper.svg);
-              margin-right: 10px; 
-            }
-            &.mobile:before{
-              content: url(/images/icons/svg/mobile.svg);
-              margin-right: 10px; 
-            }
-          }
-          
-        }
-
-      }
-      
-    }
-
-    .content{
-      @include span-columns(7);
-      @include shift(0.5);
-
-      padding-top: 40px;
-
-      p{
-        line-height: 1.4em;
-        margin: 1.2em 0;
-      }
-      aside.image{
-        display: block;
-        float: right;
-        color: $mid-grey;
-        position: relative;
-        top: -10px;
-      }
-
-      h1, h2, h3, h4, h5{
-        color: $green-darker;
-        &:visited{
-          color: $green-lighter;
-        }
-      }
+ul{
+  margin-left: 0;
+  padding-left: 0;
+  li{
+    a{
+      font-family: $font-headline-family;
+      font-weight: $font-headline-weight-bold;
+      font-size: 1.7em;
     }
   }
-
-
 }
 
+.container.navigation{
+   @include outer-container;
+   h2{
+    @include span-columns(8);
+    @include shift(2);
+    @include media($very-small-viewport-portrait){
+      @include span-columns(12);
+      @include shift(0);
+    }
+    text-align: center;
+    a{
+      text-decoration: none;
+      font-family: $font-headline-family;
+      font-weight: $font-headline-weight-bold;
+      text-align: center;
+      font-size: 1.6em;
+      color: $dark-grey;
+      text-align: center;
+    }
+    
+   }
+   h2:nth-of-type(2){
+    font-family: $font-headline-family;
+    font-weight: $font-headline-weight-normal;
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 1.5em;
+   }
+}
+
+.container.main{
+  @include outer-container;
+  .posts-list{
+    @include span-columns(8);
+    @include shift(2);
+    @include media($very-small-viewport-portrait){
+      @include span-columns(12);
+      @include shift(0);
+      padding: 20px 10px;
+
+    }
+    padding: 50px 0;
+    
+    a{
+      text-decoration: none;
+      font-size: 20px;
+      font-family: $font-headline-family;
+      font-weight: $font-headline-weight-normal;
+      &.title{
+        font-size: 30px;
+      }
+    }
+
+    p{
+      font-size: 20px;
+    }
+  }
+  .post{
+    @include span-columns(8);
+    @include shift(2);
+    @include media($very-small-viewport-portrait){
+      @include span-columns(12);
+      @include shift(0);
+      padding: 0 10px;
+
+    }
+    p{
+      font-size: 1.2em;
+      line-height: 1.4em;
+    }
+  }
+}
+
+article.post{
+  padding-top: 20px; 
+}
+
+.post-content{
+  ul{
+    color: #000;
+    margin-left: 30px;
+    font-size: 1.2em;
+    list-style-type: circle;
+    list-style-position: outside;
+    li{
+      color: #000;
+      list-style-type: circle;
+      padding-bottom: 5px;
+    }
+  }
+}

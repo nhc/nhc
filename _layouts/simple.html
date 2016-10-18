@@ -3,34 +3,19 @@
 
 {% include head.html %}
 
-<body class="default">
+<body class="simple">
 
-  <section class="container">
-  
-   <section class="navigation">
+  <header class="container navigation">
+    <h2><a href="/">Neil Charlton</a></h2><h2>Freelance web developer and creator of things</h2>
+  </header>
 
-      <div class="wrap">
+  <section class="mast">
+    <img src="{{site.url}}/images/mast1.jpg" alt="Iceland Mast 1">
+  </section>
 
-        <article class="logo">
-          <h2><a href="about.html">NEIL HUME<br />CHARLTON</a></h2>
-          <img src="/images/icon-neil-face.png" alt="Neil Charlton">
-        </article>
+  <section class="container main">
 
-        <article class="links">
-          <a class="network" href="work.html">Work</a>
-          <a class="mobile" href="projects.html">Projects</a>
-          <a class="news-paper" href="writing.html">Writing</a>
-        </article>
-  
-    </div>
-
-    </section>
-
-    <section class="content">
-       {{ content }}
-    </section>
-
-    
+    {{ content }}
 
   </section>
 
