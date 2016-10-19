@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neil Charlton |</title>
+    <description>Making Stuff.</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 18 Oct 2016 23:07:18 +0100</pubDate>
+    <lastBuildDate>Tue, 18 Oct 2016 23:07:18 +0100</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Introducing Arduino</title>
+        <description>&lt;p&gt;For about 6 months now I’ve been following the progress of &lt;a href=&quot;https://www.arduino.cc/&quot;&gt;Ardunio&lt;/a&gt; which is a rapid prototying tool for your electronics ideas. It’s a sort of way of joining the software world  with the physical, tangible world.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.arduino.cc/&quot;&gt;Ardunio&lt;/a&gt; describes itself as “an open-source electronics platform based on flexible, easy-to-use hardware and software.”&lt;/p&gt;
+
+&lt;p&gt;As someone who has been involved in software I’ve always had an interest in joining these two worlds. Will it be art, an invention or simply a thing?&lt;/p&gt;
+
+&lt;p&gt;The main attraction for me is the now easy availability of starter kits. Some clever people are producing packs available all over the web including Amazon featuring a plethora of different parts and projects. If it was really this easy I could not resist any longer.&lt;/p&gt;
+
+&lt;p&gt;Not having a clue what I was doing (well I at least checked the &lt;a href=&quot;http://reddit.com/r/arduino&quot;&gt;Ardunio Subreddit&lt;/a&gt; for tips on starting out) I went ahead and ordered &lt;a href=&quot;https://www.amazon.co.uk/gp/product/B009UKZV0A/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;this starter kit&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/arduino-kit.jpg&quot; alt=&quot;Uno&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This comes with a decent easy to understand manual (RTFM!) which&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Walks you through the basics of Arduino and electronics in a hands-on way&lt;/li&gt;
+  &lt;li&gt;Will help me build 15 projects using components that let me control the physical world through different kinds of sensors and actuators.&lt;/li&gt;
+  &lt;li&gt;Includes over 100 components&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Personally I can’t wait to get stuck in. Hopefully I’ll have something decent to show on here soon.&lt;/p&gt;
+
+&lt;p&gt;For now here is a picture of the Arduino Microcontroller board at the heart of the pack.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/posts/arduino-uno-front.jpg&quot; alt=&quot;Uno&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 18 Oct 2016 21:48:12 +0100</pubDate>
+        <link>/2016/introducing-arduino.html</link>
+        <guid isPermaLink="true">/2016/introducing-arduino.html</guid>
+        
+        
+        <category>hobby</category>
+        
+        <category>electronics</category>
+        
+        <category>arduino</category>
+        
+      </item>
+    
+  </channel>
+</rss>
