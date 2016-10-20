@@ -31,3 +31,7 @@ For now here is a picture of the Arduino Microcontroller board at the heart of t
 
 
 ![Uno](/images/posts/arduino-uno-front.jpg)
+
+Have you had the chance to make anything cool with this yet? Even better how do I get the kids interested? 
+
+{% include _disqus.html %}
